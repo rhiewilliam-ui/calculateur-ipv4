@@ -78,4 +78,4 @@ J'ai pris en charge les **algorithmes de conversion et de calcul** : passage d'u
 
 ---
 
-*SAÉ Réseaux — BUT Informatique, IUT d'Amiens, 2026.*
+*SAÉ Réseaux  BUT Informatique, IUT d'Amiens, 2026.*
