@@ -3,6 +3,10 @@
 Application de bureau Windows qui calcule toutes les informations d'un réseau IPv4 à partir d'une
 adresse IP et de son masque : adresse réseau, broadcast, plage d'hôtes, nombre de machines et classe.
 
+![Saisie de l'adresse et du masque](docs/saisie.png)
+
+![Résultats du calcul](docs/resultats.png)
+
 ## Le problème
 
 Calculer à la main l'adresse réseau ou le broadcast d'un sous-réseau est long et source d'erreurs,
@@ -24,6 +28,21 @@ binaire ou CIDR.
 - **Langage** : C#
 - **Interface** : Windows Forms (.NET Framework 4.7.2), avec des contrôles personnalisés (panneaux et champs arrondis, jauges circulaires)
 - **Outils** : Visual Studio
+
+## Un exemple
+
+Avec l'adresse **147.250.39.50** et un masque **/20** (255.255.240.0), l'application affiche :
+
+| | |
+|---|---|
+| Adresse réseau | 147.250.32.0 |
+| Première adresse utilisable | 147.250.32.1 |
+| Dernière adresse utilisable | 147.250.47.254 |
+| Adresse de broadcast | 147.250.47.255 |
+| Classe | B |
+
+Le /20 coupe le troisième octet au milieu, c'est le cas où le calcul de tête se plante le plus
+souvent : 39 & 240 donne 32, et la plage court donc jusqu'à 47.
 
 ## Comment ça marche
 
